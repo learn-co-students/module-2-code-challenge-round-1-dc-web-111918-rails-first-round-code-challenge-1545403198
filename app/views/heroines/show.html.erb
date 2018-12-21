@@ -1,0 +1,20 @@
+<h1><%= @heroine.super_name %></h1>
+  <label>
+    Name: <%= @heroine.name %>
+  </label>
+  <br><br>
+  <label>
+    Power: <%= link_to @heroine.power.name, @heroine.power %>
+  </label>
+  <br><br>
+
+  <h3>Edit this Heroine:</h3>
+  <%= link_to "Click here", edit_heroine_path %>
+
+  <h3>Remove this Heroine from index:</h3>
+  <%= form_tag @heroine, method:"Delete" do %>
+    <%= submit_tag "Delete this Heroine" %>
+  <% end %>
+
+  <h3>Heroines index page:</h3>
+  <%= link_to "Home", heroines_path %>

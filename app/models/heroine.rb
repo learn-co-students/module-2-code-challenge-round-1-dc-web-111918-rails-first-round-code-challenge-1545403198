@@ -7,7 +7,7 @@ class Heroine < ApplicationRecord
   def self.search(search)
     if search
       power = Power.find_by(name: search)
-      if
+      if power
         self.where(power_id: power)
       else
         Heroine.all

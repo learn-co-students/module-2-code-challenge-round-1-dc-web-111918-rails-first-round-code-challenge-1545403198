@@ -1,7 +1,7 @@
 class HeroinesController < ApplicationController
   def index
-    @heroines = Heroine.all
-    # @heroines = Heroine.search(params[:search])
+    # @heroines = Heroine.all
+    @heroines = Heroine.search(params[:search])
   end
 
   def show

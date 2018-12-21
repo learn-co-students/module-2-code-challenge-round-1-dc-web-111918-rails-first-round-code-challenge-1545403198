@@ -1,0 +1,19 @@
+<h2>Build your own Superheroine!</h2>
+
+<% if @heroine.errors.any? %>
+    <% @heroine.errors.full_messages.each do |err| %>
+      <%= err %>
+    <% end %>
+<% end %>
+
+
+
+<%= form_for(@heroine) do |f| %>
+  <p><%= f.label :name %>
+  <%= f.text_field :name %></p>
+  <p><%= f.label :super_name %>
+  <%= f.text_field :super_name %></p>
+  <p><%= f.label :power_id %>
+  <%= f.collection_select :power_id, Power.all, :id, :name %></p>
+  <p><%= f.submit %></p>
+<% end %>

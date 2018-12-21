@@ -1,4 +1,4 @@
-# Rails Code Challenge
+<!-- # Rails Code Challenge
 
 It's time to put our Rails know-how to the test. Today, we are asked to build an application that will be a superheroine character creator!
 
@@ -42,7 +42,7 @@ Read through the instructions to get a sense of the scope of this code challenge
 
   ![A form for adding a new heroine](new_heroine_form.gif)
 
-7. Make sure no two heroines have the same super name.
+7. Make sure no two heroines have the same super name. -->
 
 # BONUS TO BE COMPLETED IF EVERYTHING ELSE IS DONE
 
@@ -52,10 +52,10 @@ Read through the instructions to get a sense of the scope of this code challenge
 
 
 ### Hints / Tips
-+ Draw your domain model and associations before you begin. You may have to alter the current schema to get your code working.
-+ A child model cannot be persisted without being associated with its parent model.
+<!-- + Draw your domain model and associations before you begin. You may have to alter the current schema to get your code working. -->
+<!-- + A child model cannot be persisted without being associated with its parent model. -->
+<!-- + More than one heroine can have the same power.
 + More than one heroine can have the same power.
 + More than one heroine can have the same power.
-+ More than one heroine can have the same power.
-+ We want to be RESTful. What URL should show info about a particular heroine? What URL should show a form to create a heroine? What controller actions are associated?
++ We want to be RESTful. What URL should show info about a particular heroine? What URL should show a form to create a heroine? What controller actions are associated? -->
 + If you're having a hard time implementing the filter, take a look at this http://guides.rubyonrails.org/form_helpers.html#a-generic-search-form. We are asking an input field to search for powers.

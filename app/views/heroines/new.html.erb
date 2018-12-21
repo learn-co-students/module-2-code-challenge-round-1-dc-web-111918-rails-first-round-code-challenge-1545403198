@@ -1,0 +1,32 @@
+<h1>Create New Heroine</h1>
+
+<%=form_for (@heroine) do |f|%>
+<div><%=f.label :super_name%>
+<%=f.text_field :super_name%></div><br>
+<div><%=f.label :name%>
+<%=f.text_field :name%></div><br>
+<div><%=f.label "Superpower"%>
+ <%= f.collection_select(:power_id, Power.all, :id, :name, prompt: "Select one power") %></div><br>
+ 
+ <div> <%=f.submit "Create Heroine"%></div>
+<%end%><br>
+
+<div>
+  <%=link_to "Back to all Heroines", heroines_path%>
+</div>
+
+
+ <% if @heroine.errors.any? %>
+   <div id="error_explanation">
+     <h2>
+       <%= pluralize(@heroine.errors.count, "error") %>
+       prohibited this post from being saved:
+     </h2>
+
+     <ul>
+     <% @heroine.errors.full_messages.each do |msg| %>
+       <li><%= msg %></li>
+     <% end %>
+     </ul>
+   </div>
+ <% end %>

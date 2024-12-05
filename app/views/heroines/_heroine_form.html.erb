@@ -1,0 +1,22 @@
+<ul>
+<% if @heroine.errors.any? %>
+  <% @heroine.errors.full_messages.each do |e| %>
+    <li>
+      <%= e %>
+    </li>
+  <% end %>
+<% end %>
+</ul>
+
+<%= form_for @heroine do |h| %>
+  <%= h.label :name %>
+  <%= h.text_field :name %>
+  <br><br>
+  <%= h.label :super_name %>
+  <%= h.text_field :super_name %>
+  <br><br>
+  <%= h.label :power_id %>
+  <%= h.collection_select(:power_id, Power.all, :id, :name, prompt:true) %>
+  <br><br>
+  <%= h.submit %>
+<% end %>
